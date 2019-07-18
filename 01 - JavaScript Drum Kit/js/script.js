@@ -11,6 +11,7 @@ const playAudio = keyCode => {
   
   const audioElement = document.querySelector(`audio[data-key="${keyCode}"]`)
   const audio = new Audio(audioElement.getAttribute('src'))
+  audio.currentTime = 0
   audio.play()
 }
 
